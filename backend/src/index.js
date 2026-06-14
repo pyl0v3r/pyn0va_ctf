@@ -59,6 +59,7 @@ app.use(cookieParser());
 
 // Ensure upload directory exists
 const FILES_DIR = path.join(__dirname, 'files');
+//const FILES_DIR = '/opt/lampp/htdocs/uploads'; //This is the directory where the uploaded files will be stored in production
 fs.mkdirSync(FILES_DIR, { recursive: true });
 
 const storage = multer.diskStorage({
